@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin: 10px 0;
+    }
+    .card button {
+      padding: 10px 15px;
+      border: none;
+      background: #0077cc;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background: #005fa3;
+    }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="card">
+      <img src="room1.jpg" alt="Room 1">
+      <h3>Deluxe Room</h3>
+      <p>Sea view, king size bed.</p>
+      <button>Book Now</button>
+    </div>
+    <div class="card">
+      <img src="room2.jpg" alt="Room 2">
+      <h3>Suite</h3>
+      <p>Luxury suite with balcony.</p>
+      <button>Book Now</button>
+    </div>
+    <div class="card">
+      <img src="room3.jpg" alt="Room 3">
+      <h3>Standard Room</h3>
+      <p>Affordable and cozy.</p>
+      <button>Book Now</button>
+    </div>
+  </div>
+</body>
+</html>
